@@ -91,31 +91,38 @@ body {
 
 .hero-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .hero-image {
-    margin-bottom: 1rem;
+    flex-shrink: 0;
 }
 
 .hero-image img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--secondary-color);
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: block;
 }
 
-.hero h1 {
+.hero-text {
+    text-align: left;
+}
+
+.hero-text h1 {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
-.hero h2 {
+.hero-text h2 {
     font-size: 1.5rem;
     color: var(--secondary-color);
     font-weight: 400;
@@ -563,11 +570,20 @@ footer .social-link:hover {
         display: flex;
     }
 
-    .hero h1 {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
         font-size: 2rem;
     }
 
-    .hero h2 {
+    .hero-text h2 {
         font-size: 1.2rem;
     }
 
